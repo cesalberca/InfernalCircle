@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="InfernalCircle:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/InfernalCircle_jar</output-path>
+    <root id="archive" name="InfernalCircle.jar">
+      <element id="module-output" name="InfernalCircle" />
+    </root>
+  </artifact>
+</component>
