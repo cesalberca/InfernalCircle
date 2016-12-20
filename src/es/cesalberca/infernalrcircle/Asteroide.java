@@ -10,18 +10,16 @@ public class Asteroide extends ObjetoVolador implements Sujeto, Runnable {
 
     private Nave nave;
 
-    public static final int MAX_RADIO_ASTEROIDE = 40;
-    public static final int NUM_MAX_ASTEROIDES = 60;
-    public static final int MAX_RADIO = 1200;
-    public static final int MIN_RADIO = 400;
+    static final int MAX_RADIO_ASTEROIDE = 40;
+    static final int NUM_MAX_ASTEROIDES = 60;
+    static final int MAX_RADIO = 1200;
+    static final int MIN_RADIO = 400;
 
-    private List<Observador> observadores;
-
-    public Asteroide(int centroX, int centroY, int angulo, int radio, Nave nave) {
+    Asteroide(int centroX, int centroY, int angulo, int radio, Nave nave) {
         super(centroX, centroY, angulo, radio);
 
         this.nave = nave;
-        observadores = new ArrayList<>();
+        List<Observador> observadores = new ArrayList<>();
     }
 
     @Override

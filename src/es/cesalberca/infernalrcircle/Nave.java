@@ -7,14 +7,12 @@ import java.util.ArrayList;
  */
 public class Nave extends ObjetoVolador implements Runnable {
 
-    public static int MAX_RADIO_NAVE = 40;
-
-    private ArrayList<Observador> observadores;
+    static int MAX_RADIO_NAVE = 40;
 
     public Nave(int centroX, int centroY, int angulo, int radio) {
         super(centroX, centroY, angulo, radio);
 
-        observadores = new ArrayList<>();
+        ArrayList<Observador> observadores = new ArrayList<>();
     }
 
     @Override

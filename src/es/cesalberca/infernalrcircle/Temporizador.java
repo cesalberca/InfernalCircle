@@ -8,9 +8,8 @@ import java.util.TimerTask;
  */
 public class Temporizador {
     private int segundos;
-
-    Timer timer;
-    TimerTask task;
+    private Timer timer;
+    private TimerTask task;
 
     public Temporizador() {
         this.segundos = 0;
@@ -25,11 +24,11 @@ public class Temporizador {
         };
     }
 
-    public int getSegundos() {
+    int getSegundos() {
         return segundos;
     }
 
-    public void comenzar() {
+    void comenzar() {
         timer.scheduleAtFixedRate(task, 1000, 1000);
     }
 }

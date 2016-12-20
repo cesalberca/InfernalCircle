@@ -17,9 +17,7 @@ public abstract class ObjetoVolador implements Sujeto {
     private int dir;
     private boolean estaVivo;
 
-    private List<Observador> observadores;
-
-    public ObjetoVolador(int centroX, int centroY, int angulo, int distanciaDelCentro) {
+    ObjetoVolador(int centroX, int centroY, int angulo, int distanciaDelCentro) {
         this.centroX = centroX;
         this.centroY = centroY;
         this.posX = centroX;
@@ -29,72 +27,72 @@ public abstract class ObjetoVolador implements Sujeto {
         this.dir = 1;
         this.estaVivo = true;
 
-        observadores = new ArrayList<>();
+        List<Observador> observadores = new ArrayList<>();
     }
 
     public abstract void mover();
 
-    public double cos(int angulo) {
+    double cos(int angulo) {
         return Math.cos(Math.toRadians(angulo));
     }
 
-    public double sin(int angulo) {
+    double sin(int angulo) {
         return Math.sin(Math.toRadians(angulo));
     }
 
-    public void cambiarDireccion(int nuevaDireccion) {
+    void cambiarDireccion(int nuevaDireccion) {
         if (nuevaDireccion != this.dir) this.dir *= -1;
     }
 
-    public int getCentroX() {
+    int getCentroX() {
         return centroX;
     }
 
-    public int getCentroY() {
+    int getCentroY() {
         return centroY;
     }
 
-    public int getPosX() {
+    int getPosX() {
         return posX;
     }
 
-    public int getPosY() {
+    int getPosY() {
         return posY;
     }
 
-    public void setPosX(int posX) {
+    void setPosX(int posX) {
         this.posX = posX;
     }
 
-    public void setPosY(int posY) {
+    void setPosY(int posY) {
         this.posY = posY;
     }
 
-    public void setDistanciaDelCentro(int distanciaDelCentro) {
+    void setDistanciaDelCentro(int distanciaDelCentro) {
         this.distanciaDelCentro = distanciaDelCentro;
     }
 
-    public int getDistanciaDelCentro() {
+    int getDistanciaDelCentro() {
         return distanciaDelCentro;
     }
 
-    public int getAngulo() {
+    int getAngulo() {
         return angulo;
     }
 
-    public void setAngulo(int angulo) {
+    void setAngulo(int angulo) {
         this.angulo = angulo;
     }
 
-    public int getDir() {
+    int getDir() {
         return dir;
     }
 
-    public boolean estaVivo() {
+    boolean estaVivo() {
         return estaVivo;
     }
 
-    public void setEstaVivo(boolean estaVivo) {
+    void setEstaVivo(boolean estaVivo) {
         this.estaVivo = estaVivo;
     }
 

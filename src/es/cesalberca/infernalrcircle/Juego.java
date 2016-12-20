@@ -18,7 +18,7 @@ public class Juego extends JFrame implements Observador {
     private JLabel jlPuntuacion;
     private JLabel jlTiempo;
 
-    Temporizador temporizador;
+    private Temporizador temporizador;
 
     private Nave nave;
     private List<Asteroide> asteroides;
@@ -39,7 +39,7 @@ public class Juego extends JFrame implements Observador {
         comenzarJuego();
     }
 
-    public void comenzarJuego() {
+    private void comenzarJuego() {
 
         temporizador = new Temporizador();
         temporizador.comenzar();
@@ -79,7 +79,7 @@ public class Juego extends JFrame implements Observador {
         return (int) this.getContentPane().getSize().getHeight() / 2;
     }
 
-    public void setPosicionNave() {
+    private void setPosicionNave() {
         jbNave.setBounds(
                 nave.getPosX() + getAnchoPantalla(),
                 nave.getPosY() + getAltoPantalla(),
@@ -88,7 +88,7 @@ public class Juego extends JFrame implements Observador {
         );
     }
 
-    public void setPosicionAsteroides() {
+    private void setPosicionAsteroides() {
         for (int i = 0; i < asteroides.size(); i++) {
 
             if (!asteroides.get(i).estaVivo())
